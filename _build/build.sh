@@ -65,7 +65,8 @@ mf --f "${INCLUDE_ORIGIN}/lodepng.h" --t "${INCLUDE_TARGET}/lodepng.h"
 # Compile
 #
 
-kalamake ${BUILD_RELEASE} && kalamake ${BUILD_DEBUG}
+kalamake ${BUILD_RELEASE} || exit 1
+kalamake ${BUILD_DEBUG} || exit 1
 
 #
 # Cleanup
