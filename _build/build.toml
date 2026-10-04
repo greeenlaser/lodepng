@@ -1,0 +1,38 @@
+[project]
+name="lodepng"
+version="1-0-0"
+kmake="project.kmake"
+
+[references]
+lo_cpp="lodepng.cpp"
+lo_h="lodepng.h"
+
+[windows-sync]
+lo_copy_src=[ "../${lo_cpp}", "src/${lo_cpp}", "copy" ]
+lo_copy_inc=[ "../${lo_h}", "include/${lo_h}", "copy" ]
+
+[windows-post-build-sync]
+lo_bin_rel=[ "build/temp/release-windows/lodepng.lib", "build/${version}/lodepng.lib", "copy" ]
+lo_bin_deb=[ "build/temp/debug-windows/lodepngd.lib", "build/${version}/lodepngd.lib", "copy" ]
+lo_include=[ "include", "build/${version}/include", "copy" ]
+lo_license=[ "../LICENSE", "build/${version}/LICENSE", "copy" ]
+
+[windows-gnu-sync]
+lo_copy_src=[ "../${lo_cpp}", "src/${lo_cpp}", "copy" ]
+lo_copy_inc=[ "../${lo_h}", "include/${lo_h}", "copy" ]
+
+[windows-gnu-post-build-sync]
+lo_bin_rel=[ "build/temp/release-windows-gnu/lodepng-gnu.lib", "build/${version}/lodepng-gnu.lib", "copy" ]
+lo_bin_deb=[ "build/temp/debug-windows-gnu/lodepng-gnud.lib", "build/${version}/lodepng-gnud.lib", "copy" ]
+lo_include=[ "include", "build/${version}/include", "copy" ]
+lo_license=[ "../LICENSE", "build/${version}/LICENSE", "copy" ]
+
+[linux-sync]
+lo_copy_src=[ "../${lo_cpp}", "src/${lo_cpp}", "copy" ]
+lo_copy_inc=[ "../${lo_h}", "include/${lo_h}", "copy" ]
+
+[linux-post-build-sync]
+lo_bin_rel=[ "build/temp/release-linux/liblodepng.a", "build/${version}/liblodepng.a", "copy" ]
+lo_bin_deb=[ "build/temp/debug-linux/liblodepngd.a", "build/${version}/liblodepngd.a", "copy" ]
+lo_include=[ "include", "build/${version}/include", "copy" ]
+lo_license=[ "../LICENSE", "build/${version}/LICENSE", "copy" ]
