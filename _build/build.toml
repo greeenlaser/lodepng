@@ -17,16 +17,6 @@ lo_bin_deb=[ "build/temp/debug-windows/lodepngd.lib", "build/${version}/lodepngd
 lo_include=[ "include", "build/${version}/include", "copy" ]
 lo_license=[ "../LICENSE", "build/${version}/LICENSE", "copy" ]
 
-[windows-gnu-sync]
-lo_copy_src=[ "../${lo_cpp}", "src/${lo_cpp}", "copy" ]
-lo_copy_inc=[ "../${lo_h}", "include/${lo_h}", "copy" ]
-
-[windows-gnu-post-build-sync]
-lo_bin_rel=[ "build/temp/release-windows-gnu/lodepng-gnu.lib", "build/${version}/lodepng-gnu.lib", "copy" ]
-lo_bin_deb=[ "build/temp/debug-windows-gnu/lodepng-gnud.lib", "build/${version}/lodepng-gnud.lib", "copy" ]
-lo_include=[ "include", "build/${version}/include", "copy" ]
-lo_license=[ "../LICENSE", "build/${version}/LICENSE", "copy" ]
-
 [linux-sync]
 lo_copy_src=[ "../${lo_cpp}", "src/${lo_cpp}", "copy" ]
 lo_copy_inc=[ "../${lo_h}", "include/${lo_h}", "copy" ]

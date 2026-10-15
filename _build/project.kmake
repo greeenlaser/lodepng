@@ -1,48 +1,36 @@
-#version 1.0
+#version 2.0
 
 #references
-name_bin: lodepng
-dir_release: build/temp/release-
-dir_debug: build/temp/debug-
+name_bin: "lodepng"
+dir_release: "build/temp/release-"
+dir_debug: "build/temp/debug-"
 
 #global
-compilerlauncher: ccache
-compiler: clang++
-standard: c++20
-binarytype: static
+compilerlauncher: "ccache"
+compiler: "clang++"
+standard: "c++20"
+binarytype: "static"
 sources: "src"
 headers: "include"
-defines: MAKE_LIB
-warninglevel: normal
+defines: "MAKE_LIB"
+warninglevel: "normal"
 
 #profile debug-windows
-binaryname: ${name_bin}d
-buildtype: debug
+binaryname: "${name_bin}d"
+buildtype: "debug"
 buildpath: "${dir_debug}windows"
 
 #profile release-windows
-binaryname: ${name_bin}
-buildtype: minsizerel
+binaryname: "${name_bin}"
+buildtype: "minsizerel"
 buildpath: "${dir_release}windows"
 
-#profile debug-windows-gnu
-targettype: windows-gnu
-binaryname: ${name_bin}-gnud
-buildtype: debug
-buildpath: "${dir_debug}windows-gnu"
-
-#profile release-windows-gnu
-targettype: windows-gnu
-binaryname: ${name_bin}-gnu
-buildtype: minsizerel
-buildpath: "${dir_release}windows-gnu"
-
 #profile debug-linux
-binaryname: lib${name_bin}d
-buildtype: debug
+binaryname: "lib${name_bin}d"
+buildtype: "debug"
 buildpath: "${dir_debug}linux"
 
 #profile release-linux
-binaryname: lib${name_bin}
-buildtype: minsizerel
+binaryname: "lib${name_bin}"
+buildtype: "minsizerel"
 buildpath: "${dir_release}linux"
